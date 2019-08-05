@@ -35,7 +35,7 @@ RUN Rscript -e 'install.packages("BiocManager")' \
 -e 'BiocManager::install("S4Vectors")' \
 -e 'BiocManager::install("SingleCellExperiment")' \
 -e 'BiocManager::install("SummarizedExperiment")' 
-RUN Rscript -e "devtools::install_version('Seurat', version = '3.0.1',  repos = 'http://cran.us.r-project.org')"
+RUN Rscript -e "devtools::install_version('Seurat', version = '3.0.2',  repos = 'http://cran.us.r-project.org')"
 RUN Rscript -e "install.packages('tidyverse')"
 
 
