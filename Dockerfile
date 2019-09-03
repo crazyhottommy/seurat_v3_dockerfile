@@ -39,4 +39,4 @@ RUN Rscript -e "devtools::install_version('Seurat', version = '3.0.2',  repos = 
 RUN Rscript -e "install.packages('tidyverse')"
 
 
-RUN Rscript -e "devtools::install_github('crazyhottommy/scclusteval', ref = 'seuratv3', upgrade = 'never')"
+RUN Rscript -e "devtools::install_github('crazyhottommy/scclusteval', ref = 'seuratv3', upgrade = 'ask')"
