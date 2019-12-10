@@ -3,7 +3,7 @@
 FROM r-base:3.5.1
 
 # devtools needs this
-RUN apt update -y && apt upgrade -y && apt-get install -y --fix-missing \
+RUN apt update -y && apt-get install -y --fix-missing \
 software-properties-common \
 build-essential gcc \
 build-essential 
@@ -37,6 +37,6 @@ RUN Rscript -e 'install.packages("BiocManager")' \
 -e 'BiocManager::install("SummarizedExperiment")' 
 RUN Rscript -e "devtools::install_version('Seurat', version = '3.0.2',  repos = 'http://cran.us.r-project.org')"
 RUN Rscript -e "install.packages('tidyverse')"
-
+RUN Rscript -e "devtools::install_github('immunogenomics/presto')"
 
 RUN Rscript -e "devtools::install_github('crazyhottommy/scclusteval', ref = 'seuratv3', upgrade = 'ask')"
